@@ -6,10 +6,10 @@ def add_matrices2D(mat1, mat2):
     """add_matrice2d"""
     matrix = []
     if (len(mat1) == 0 and len(mat2) == 0):
-        return []
+        return None
 
     if (len(mat1[0]) == 0 and len(mat2[0]) == 0):
-        return [[]]
+        return None
 
     rows = len(mat1)
     cols = len(mat1[0])
