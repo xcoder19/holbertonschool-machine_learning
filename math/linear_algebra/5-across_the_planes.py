@@ -21,6 +21,8 @@ def add_matrices2D(mat1, mat2):
 def matrix_shape(matrix):
     """ matrix shape"""
     shape = []
+    if len(matrix) == 0:
+        return None
     while isinstance(matrix, list):
         shape.append(len(matrix))
         matrix = matrix[0]
