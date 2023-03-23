@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """ matrix shape"""
+
+
 def matrix_shape(matrix):
     """ matrix shape"""
     rows = len(matrix)
@@ -17,5 +19,4 @@ def matrix_shape(matrix):
         shape = [rows, cols]
     else:
         shape = [rows]
-    return shape
-    
+    return shape  
