@@ -6,9 +6,9 @@ def matrix_shape(matrix):
     for i in range(0,rows):
         if isinstance(matrix[i],list) and cols < len(matrix[i]):
             cols = len(matrix[i])
-        for j in matrix[i]:
-            if isinstance(j,list) and cols2 < len(j):
-                cols2 = len(j)
+            for j in matrix[i]:
+                if isinstance(j,list) and cols2 < len(j):
+                    cols2 = len(j)
     if cols2 > 0:
         shape = [rows,cols,cols2]
     else:
