@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
+"""matrix transpose"""
+
+
 def matrix_transpose(matrix):
+    """matrix transpose"""
+
     rows = len(matrix)
     cols = len(matrix[0])
 
