@@ -19,4 +19,4 @@ def matrix_shape(matrix):
         shape = [rows, cols]
     else:
         shape = [rows]
-    return shape  
+    return shape
