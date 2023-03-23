@@ -11,7 +11,9 @@ def matrix_shape(matrix):
                     cols2 = len(j)
     if cols2 > 0:
         shape = [rows,cols,cols2]
-    else:
+    elif cols > 0:
         shape = [rows,cols]
+    else:
+        shape = [rows]
     return shape
     
