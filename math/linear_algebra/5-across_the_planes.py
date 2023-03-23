@@ -5,12 +5,11 @@
 def add_matrices2D(mat1, mat2):
     """add_matrice2d"""
     matrix = []
-    if (len(mat1) == 0 and len(mat2) == 0):
-        matrix = [[],[]]
-        return matrix
 
     if (len(mat1[0]) == 0 and len(mat2[0]) == 0):
-        matrix = [[],[]]
+        for i in range(len(mat1)):
+            matrix.append([])
+
         return matrix
 
     rows = len(mat1)
