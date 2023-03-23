@@ -3,9 +3,9 @@
 
 
 def matrix_shape(matrix):
-        """ matrix shape"""
-        shape = []
-        while isinstance(matrix, list):
-            shape.append(len(matrix))
-            matrix = matrix[0]
-        return shape
+    """ matrix shape"""
+    shape = []
+    while isinstance(matrix, list):
+        shape.append(len(matrix))
+        matrix = matrix[0]
+    return shape
