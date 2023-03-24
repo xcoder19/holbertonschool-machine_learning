@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
+"""concatenate matrices using numpy"""
 
 import numpy as np
-"""concatenate matrices using numpy"""
 
 
 def np_cat(mat1, mat2, axis=0):
