@@ -4,28 +4,26 @@
 
 def cat_matrices2D(mat1, mat2, axis=0):
     """cat matrices"""
-    matrix = []
+    rows1 = len(mat1)
+    rows2 = len(mat2)
+    cols1 = len(mat1[0])
+    cols2 = len(mat2[0])
+
     if axis == 0:
+        if cols1 != cols2:
+            return None
+        matrix = []
         for x in mat1:
-            matrix.append(x)
-
-        for y in mat2:
-            matrix.append(y)
+            matrix.append(x.copy())
+        for x in mat2:
+            matrix.append(x.copy())
+        return matrix
     elif axis == 1:
-        for i in range(len(mat1)):
-            matrix.append(cat_arrays(mat1[i], mat2[i]))
-
-    return matrix
-
-
-def cat_arrays(arr1, arr2):
-    """concat arrays"""
-    arr = []
-
-    for x in arr1:
-        arr.append(x)
-
-    for y in arr2:
-        arr.append(y)
-
-    return arr
+        if rows1 != rows2:
+            return None
+        matrix = []
+        for i in range(rows1):
+            matrix.append(mat1[i] + mat2[i])
+        return matrix
+    else:
+        return None
