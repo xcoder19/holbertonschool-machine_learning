@@ -3,6 +3,6 @@
 
 
 def np_transpose(matrix):
-	"""numpy matrix transpose"""
+    """numpy matrix transpose"""
 
-	return matrix.T
+    return matrix.T
