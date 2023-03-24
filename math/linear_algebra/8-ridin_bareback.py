@@ -4,8 +4,6 @@
 
 def mat_mul(mat1, mat2):
     """matrix multiplication"""
-
-
     rows1 = len(mat1)
     rows2 = len(mat2)
     cols1 = len(mat1[0])
