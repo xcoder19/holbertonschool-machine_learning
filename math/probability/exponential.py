@@ -19,7 +19,7 @@ class Exponential:
 
     def pdf(self, x):
         """returns pdf value """
-        
+
         if x < 0:
             return 0
 
