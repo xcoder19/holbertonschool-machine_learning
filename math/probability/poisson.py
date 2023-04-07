@@ -18,7 +18,6 @@ class Poisson:
             self.lambtha = float(sum(data) / len(data))
 
     def pmf(self, k):
-        import math
         if not isinstance(k, int):
             k = int(k)
         if k < 0:
