@@ -18,16 +18,15 @@ class Poisson:
             self.lambtha = float(sum(data) / len(data))
 
     def pmf(self, k):
-        
+        """pmf"""
         if not isinstance(k, int):
             k = int(k)
         if k < 0:
             return 0
 
-        return ((2.718281828459045**(-self.lambtha)) * (self.lambtha ** k)) / \
-            self.factorial(k)
-            
-            
+        return ((2.7182818285**(-self.lambtha)) * (self.lambtha ** int(k))) / \
+            self.factorial(int(k))
+
     def factorial(self, n):
         if n == 0 or n == 1:
             return 1
