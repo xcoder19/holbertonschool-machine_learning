@@ -19,8 +19,7 @@ class Poisson:
 
     def pmf(self, k):
         """pmf"""
-        
-        
+
         if not isinstance(k, int):
             k = int(k)
         if k < 0:
