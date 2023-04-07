@@ -35,3 +35,13 @@ class Poisson:
             return 1
         else:
             return n * self.factorial(n - 1)
+
+    def cdf(self, k):
+        "returns the cdf value of k"
+
+        if not isinstance(k, int):
+            k = int(k)
+        if k < 0:
+            return 0
+
+        return sum(self.pmf(i) for i in range(k + 1))
