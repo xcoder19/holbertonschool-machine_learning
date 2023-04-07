@@ -18,7 +18,7 @@ class Poisson:
             self.lambtha = float(sum(data) / len(data))
 
     def pmf(self, k):
-        """pmf"""
+        """returns the pmf value of k"""
 
         if not isinstance(k, int):
             k = int(k)
@@ -29,7 +29,7 @@ class Poisson:
             self.factorial(int(k))
 
     def factorial(self, n):
-        """factorial"""
+        """calculates factorial"""
 
         if n == 0 or n == 1:
             return 1
