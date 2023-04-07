@@ -39,3 +39,21 @@ class Normal:
         exp_term = 2.7182818285**(-0.5 * ((x - self.mean) / self.stddev) ** 2)
         pdf_value = (1 / (self.stddev * (2 * pi)**0.5)) * exp_term
         return pdf_value
+
+    def cdf(self, x):
+        """returns cdf"""
+
+        z = self.z_score(x)
+        cdf_value = 0.5 * (1 + self.erf(z / (2)**0.5))
+        return cdf_value
+
+    def erf(self, x):
+        """returns erf value"""
+
+        pi = 3.1415926536
+        return ((2 / pi ** 0.5) * (
+            x - (x ** 3 / 3) +
+            (x ** 5 / 10) -
+            (x ** 7 / 42) +
+            (x ** 9 / 216)
+        ))
