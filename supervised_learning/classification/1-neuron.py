@@ -13,6 +13,6 @@ class Neuron:
         elif nx < 1:
             raise ValueError("nx must be a positive integer")
 
-        self._W = np.random.randn(nx).reshape(1, nx)
-        self._b = 0
-        self._A = 0
+        self.__W = np.random.randn(nx).reshape(1, nx)
+        self.__b = 0
+        self.__A = 0
