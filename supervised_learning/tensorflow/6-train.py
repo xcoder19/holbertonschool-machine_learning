@@ -21,6 +21,7 @@ def train(
         alpha,
         iterations,
         save_path="/tmp/model.ckpt"):
+    """train method"""
 
     nx, m = X_train.shape
     _, classes = Y_train.shape
