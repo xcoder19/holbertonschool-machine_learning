@@ -13,4 +13,4 @@ def create_layer(prev, n, activation):
         kernel_initializer=initializer,
         name="layer")
 
-    return layer
+    return layer(prev)
