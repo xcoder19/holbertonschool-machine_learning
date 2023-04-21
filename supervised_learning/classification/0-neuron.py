@@ -5,7 +5,7 @@ import numpy as np
 
 
 class Neuron:
-    """Neuron class"""
+    """Neuron class for supervised ml"""
 
     def __init__(self, nx):
 
