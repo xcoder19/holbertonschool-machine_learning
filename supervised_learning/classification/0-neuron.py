@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 import numpy as np
 
+"""Neuron class"""
+
 
 class Neuron:
+    """Neuron class"""
 
     def __init__(self, nx):
 
