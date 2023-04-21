@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-import numpy as np
-
 """Neuron class"""
+import numpy as np
 
 
 class Neuron:
