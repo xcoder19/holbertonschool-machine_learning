@@ -65,7 +65,7 @@ class Neuron:
         self.__b = self.__b - alpha * db
 
     def train(self, X, Y, iterations=5000, alpha=0.05):
-        """train"""
+        "train"
         if not isinstance(iterations, int):
             raise TypeError("iterations must be an integer")
         if iterations <= 0:
@@ -79,10 +79,6 @@ class Neuron:
 
             self.forward_prop(X)
 
-            cost = self.cost(Y, self.__A)
-
             self.gradient_descent(X, Y, self.__A, alpha)
 
-        self.forward_prop(X)
-
-        return self.__A, self.cost(Y, self.__A)
+        return self.evaluate(X, Y)
