@@ -98,7 +98,7 @@ class NeuralNetwork:
 
     def train(self, X, Y, iterations=5000, alpha=0.05):
         """Train"""
-        
+
         if not isinstance(iterations, int):
             raise TypeError("iterations must be an integer")
         if iterations <= 0:
@@ -108,10 +108,8 @@ class NeuralNetwork:
         if alpha <= 0:
             raise ValueError("alpha must be positive")
 
-        
         for _ in range(iterations):
             self.forward_prop(X)
             self.gradient_descent(X, Y, self.A1, self.A2, alpha)
 
-        
         return self.evaluate(X, Y)
