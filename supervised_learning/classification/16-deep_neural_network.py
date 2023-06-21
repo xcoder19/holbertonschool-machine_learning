@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 
 """deep neural network"""
@@ -24,7 +23,8 @@ class DeepNeuralNetwork:
         layer_size = nx
 
         for i in range(1, self.L + 1):
+            he_et_al = np.sqrt(2 / layer_size)
             self.weights["W" + str(i)] = np.random.randn(layers[i - 1],
-                                                         layer_size) * np.sqrt(2 / layer_size)
+                                                         layer_size) * he_et_al
             self.weights["b" + str(i)] = np.zeros((layers[i - 1], 1))
             layer_size = layers[i - 1]
