@@ -35,15 +35,6 @@ class DeepNeuralNetwork:
         """Getter for L"""
         return self.__L
 
-    @L.setter
-    def L(self, value):
-        """Setter for L"""
-        if not isinstance(value, int):
-            raise TypeError("L must be an integer")
-        if value < 1:
-            raise ValueError("L must be a positive integer")
-        self.__L = value
-
     @property
     def cache(self):
         """Getter for cache"""
