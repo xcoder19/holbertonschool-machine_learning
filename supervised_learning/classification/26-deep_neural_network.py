@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 """deep neural network"""
 import numpy as np
 
@@ -94,8 +93,6 @@ class DeepNeuralNetwork:
                         dz) * (A_prev * (1 - A_prev))
             self.__weights['W' + str(i)] -= alpha * dw
             self.__weights['b' + str(i)] -= alpha * db
-
-    import matplotlib.pyplot as plt
 
     def train(
             self,
