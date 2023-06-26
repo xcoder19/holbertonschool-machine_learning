@@ -6,7 +6,7 @@ determinant = __import__('0-determinant').determinant
 def minor(matrix):
     """minor"""
     if not isinstance(matrix, list) or not all(isinstance(row, list)
-                        for row in matrix) or len(matrix) == 0:
+    for row in matrix) or len(matrix) == 0:
         raise TypeError("matrix must be a list of lists")
 
     n = len(matrix)
