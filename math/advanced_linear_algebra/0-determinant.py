@@ -27,4 +27,3 @@ def determinant(matrix):
             return det
     else:
         return 1
-
