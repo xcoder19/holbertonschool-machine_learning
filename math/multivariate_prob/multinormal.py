@@ -2,6 +2,8 @@
 """multinormal"""
 import numpy as np
 
+np.set_printoptions(formatter={'float_kind': '{:f}'.format})
+
 
 class MultiNormal:
     """multinormal"""
@@ -21,7 +23,7 @@ class MultiNormal:
         self.cov = deviation @ deviation.T / (n - 1)
 
     def pdf(self, x):
-        """pdf"""
+        """pdf method"""
 
         if not isinstance(x, np.ndarray):
             raise TypeError("x must be a numpy.ndarray")
