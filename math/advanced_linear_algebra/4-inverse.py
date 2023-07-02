@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-
+"""inverse"""
 determinant = __import__('0-determinant').determinant
 adjugate = __import__('3-adjugate').adjugate
 

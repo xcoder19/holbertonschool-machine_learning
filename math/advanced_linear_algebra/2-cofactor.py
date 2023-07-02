@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+"""cofactor"""
 determinant = __import__('0-determinant').determinant
 
 
