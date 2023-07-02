@@ -2,8 +2,6 @@
 """multinormal"""
 import numpy as np
 
-np.set_printoptions(formatter={'float_kind': '{:f}'.format})
-
 
 class MultiNormal:
     """multinormal"""
