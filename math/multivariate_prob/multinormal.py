@@ -4,6 +4,8 @@ import numpy as np
 
 
 class MultiNormal:
+    """multinormal"""
+
     def __init__(self, data):
         if not isinstance(data, np.ndarray) or len(data.shape) != 2:
             raise TypeError("data must be a 2D numpy.ndarray")
@@ -19,6 +21,8 @@ class MultiNormal:
         self.cov = deviation @ deviation.T / (n - 1)
 
     def pdf(self, x):
+        """pdf"""
+
         if not isinstance(x, np.ndarray):
             raise TypeError("x must be a numpy.ndarray")
         d = self.cov.shape[0]
