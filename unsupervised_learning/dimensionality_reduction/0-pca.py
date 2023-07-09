@@ -1,11 +1,10 @@
-
 #!/usr/bin/env python3
-"""pca"""
+"""pca v1"""
 import numpy as np
 
 
 def pca(X, var=0.95):
-    """pca"""
+    """pca v1"""
 
     _, singular_values, right_singular_vectors = np.linalg.svd(X)
 
