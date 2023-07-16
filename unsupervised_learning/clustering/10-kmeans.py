@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """kmeans"""
 
-from sklearn.cluster import KMeans
+import sklearn.cluster
 
 
 def kmeans(X, k):
