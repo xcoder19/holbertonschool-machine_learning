@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""PDF"""
+"""PDF """
 import numpy as np
 
 
 def pdf(X, m, S):
-    """PDF"""
+    """PDF """
     if not isinstance(X, np.ndarray) or len(X.shape) != 2:
         return None
     if not isinstance(m, np.ndarray) or len(m.shape) != 1:
