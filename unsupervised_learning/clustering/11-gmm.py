@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """GMM"""
-from sklearn.mixture import GaussianMixture
+import sklearn.mixture
 
 
 def gmm(X, k):
