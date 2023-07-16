@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""GMM"""
+"""calculates a GMM from a dataset"""
 import sklearn.mixture
 
 
 def gmm(X, k):
-    """GMM"""
+    """calculates a GMM from a dataset"""
     if not isinstance(X, np.ndarray) or len(X.shape) != 2:
         return None, None, None, None, None
     if not isinstance(k, int) or k <= 0 or k >= X.shape[0]:
