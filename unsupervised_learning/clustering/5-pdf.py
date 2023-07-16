@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""calculates the probability density function of a Gaussian distribution"""
+"""calculatesthe probability density function of a Gaussian distribution"""
 import numpy as np
 
 
 def pdf(X, m, S):
-    """calculates the probability density function of a Gaussian distribution"""
+    """calculatesthe probability density function of a Gaussian distribution"""
     if not isinstance(X, np.ndarray) or len(X.shape) != 2:
         return None
     if not isinstance(m, np.ndarray) or len(m.shape) != 1:
