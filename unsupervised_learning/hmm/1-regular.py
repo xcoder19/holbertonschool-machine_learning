@@ -28,4 +28,5 @@ def regular(P):
     steady_state_probabilities = np.real_if_close(
         np.abs(eigenvectors[:, index].T) / np.sum(np.abs(eigenvectors[:, index])))
 
-    return steady_state_probabilities
+    steady_state_probabilities_np = np.array([steady_state_probabilities])
+    return steady_state_probabilities_np
