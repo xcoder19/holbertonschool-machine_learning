@@ -1,4 +1,3 @@
-
 #!/usr/bin/env pyton3
 
 """baum_welch"""
