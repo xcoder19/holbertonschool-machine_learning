@@ -49,10 +49,10 @@ def backward(Observation, Emission, Transition, Initial):
 
     for t in range(T - 2, -1, -1):
         for i in range(N):
-            intermediate_product = B[:, t + 1] * \
-                Emission[:, Observation[t + 1]]
-
-            B[:, t] = np.sum(intermediate_product * Transition[:, i], axis=1)
+            B[i, t] = np.sum(
+                B[:, t + 1] *
+                Emission[:, Observation[t + 1]] *
+                Transition[i, :])
 
     P = np.sum(Initial.flatten() * Emission[:, Observation[0]] * B[:, 0])
 
