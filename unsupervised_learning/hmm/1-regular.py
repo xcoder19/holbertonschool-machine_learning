@@ -25,8 +25,12 @@ def regular(P):
 
     index = np.argmin(np.abs(eigenvalues - 1))
 
+    abs_eigenvectors = np.abs(eigenvectors[:, index].T)
+
+    sum_abs_eigenvectors = np.sum(abs_eigenvectors)
+
     steady_state_probabilities = np.real_if_close(
-        np.abs(eigenvectors[:, index].T) / np.sum(np.abs(eigenvectors[:, index])))
+        abs_eigenvectors / sum_abs_eigenvectors)
 
     steady_state_probabilities_np = np.array([steady_state_probabilities])
     return steady_state_probabilities_np
