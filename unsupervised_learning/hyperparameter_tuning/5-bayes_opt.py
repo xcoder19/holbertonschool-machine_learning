@@ -9,7 +9,8 @@ GP = __import__('2-gp').GaussianProcess
 class BayesianOptimization:
     """BayesianOptimization"""
 
-    def __init__(self, f, X_init, Y_init, bounds, ac_samples, l=1, sigma_f=1, xsi=0.01, minimize=True):
+    def __init__(self, f, X_init, Y_init, bounds, ac_samples,
+                 l=1, sigma_f=1, xsi=0.01, minimize=True):
         """init"""
         self.f = f
         self.gp = GP(X_init, Y_init, l, sigma_f)
@@ -54,8 +55,4 @@ class BayesianOptimization:
         X_opt = self.gp.X[idx_opt]
         Y_opt = self.gp.Y[idx_opt]
 
-        X_opt = np.array([X_opt])
-        Y_opt = np.array([Y_opt])
-        X_opt = X_opt.reshape(-1, 1)
-        Y_opt = Y_opt.reshape(-1, 1)
         return X_opt, Y_opt
