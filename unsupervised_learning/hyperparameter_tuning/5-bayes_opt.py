@@ -56,5 +56,6 @@ class BayesianOptimization:
 
         X_opt = np.array([X_opt])
         Y_opt = np.array([Y_opt])
-
+        X_opt = X_opt.reshape(-1, 1)
+        Y_opt = Y_opt.reshape(-1, 1)
         return X_opt, Y_opt
