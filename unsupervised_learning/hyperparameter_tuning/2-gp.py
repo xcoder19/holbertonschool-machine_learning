@@ -40,7 +40,7 @@ class GaussianProcess:
     def update(self, X_new, Y_new):
         """update"""
         self.X = np.append(self.X, X_new)
-        self.X = np.array([self.X])
         self.Y = np.append(self.Y, Y_new)
-        self.Y = np.array(self.Y)
         self.K = self.kernel(self.X, self.X)
+        self.Y = np.array([self.Y])
+        self.X = np.array([self.X])
