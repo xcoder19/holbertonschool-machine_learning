@@ -43,4 +43,6 @@ class GaussianProcess:
         self.Y = np.append(self.Y, Y_new)
         self.K = self.kernel(self.X, self.X)
         self.Y = np.array([self.Y])
+        self.Y = self.Y.reshape(-1, 1)
         self.X = np.array([self.X])
+        self.X = self.X.reshape(-1, 1)
