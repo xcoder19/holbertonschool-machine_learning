@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""RNN"""
+"""RNN function"""
 import numpy as np
 
 
 def rnn(rnn_cell, X, h_0):
-    """RNN"""
+    """RNN function"""
     t, m, i = X.shape
     h = h_0.shape[1]
     o = rnn_cell.Wy.shape[1]
