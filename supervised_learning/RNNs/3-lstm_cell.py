@@ -25,7 +25,7 @@ class LSTMCell:
         return 1 / (1 + np.exp(-x))
 
     def tanh(self, x):
-        """tanh"""
+        """tanh function"""
         return np.tanh(x)
 
     def forward(self, h_prev, c_prev, x_t):
